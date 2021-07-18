@@ -7,12 +7,158 @@
 }
 
 :root {
+
+    font-family: 'Space Mono', monospace;
     
     --Strong-cyan: hsl(172, 67%, 45%);
 
     --Very-dark-cyan: hsl(183, 100%, 15%);
     --Dark-grayish-cyan: hsl(186, 14%, 43%);
     --Dark-grayish-cyan: hsl(184, 14%, 56%);
-    --Light-grayish-cyan: hsl(185, 41%, 84%);
-    --Light-grayish-cyan: hsl(189, 41%, 97%);
+    --Light-grayish-cyan-1: hsl(185, 41%, 84%);
+    --Light-grayish-cyan-2: hsl(189, 41%, 97%);
+}
+
+body {
+    background-color: var(--Light-grayish-cyan-1);
+}
+
+header {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+main {
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 20px 20px 0 0;
+    background-color: white;
+}
+
+.logo {
+    margin: 0 auto;
+}
+
+.input {
+    padding: 2rem;
+}
+
+.bill__title {
+    color: var(--Very-dark-cyan);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.bill__input {
+    width: 100%;
+    background-color: var(--Light-grayish-cyan-2);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.bill--amount {
+    font-size: 24px;
+    font-weight: 700;
+    width: 90%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    color: var(--Very-dark-cyan);
+}
+
+.tip__selectors {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 5%;
+    column-gap: 3%;
+    margin-bottom: 2rem;
+}
+
+.tip__percent__title {
+    color: var(--Very-dark-cyan);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+.tip__percentage {
+    color: white;
+    background-color: var(--Very-dark-cyan);
+}
+
+.custom {
+    width: 100%;
+}
+
+.people__title {
+    color: var(--Very-dark-cyan);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.people__input {
+    width: 100%;
+    background-color: var(--Light-grayish-cyan-2);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.people__amount {
+    font-size: 24px;
+    font-weight: 700;
+    width: 90%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    color: var(--Very-dark-cyan);
+}
+
+.output {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0 1.5rem;
+}
+
+.tip__amount, .total__amount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.tip__person, .total__person {
+    color: white;
+}
+
+.per__person {
+    display: block;
+    color: var(--Dark-grayish-cyan)
+}
+
+.amount__payable {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--Strong-cyan);
+}
+
+.reset {
+    width: 100%;
+    background-color: var(--Strong-cyan);
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
 }

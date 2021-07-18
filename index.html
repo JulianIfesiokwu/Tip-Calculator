@@ -11,8 +11,11 @@
 <body>
 
   <div class="container">
+
+    <header>
+      <span><img class="logo" src="./images/logo.svg" alt="logo"></span>
+    </header>
     <main>
-      <span><img src="./images/logo.svg" alt="logo"></span>
 
       <section class="calculator">
         <div class="input">
@@ -27,12 +30,16 @@
 
           <div class="tip--percent">
             <p class="tip__percent__title"> Select Tip %</p>
-            <button class="tip__percentage">5%</button>
-            <button class="tip__percentage">10%</button>
-            <button class="tip__percentage">15%</button>
-            <button class="tip__percentage">25%</button>
-            <button class="tip__percentage">50%</button>
-            <button class="tip__percentage custom">Custom</button>
+
+            <div class="tip__selectors">
+              <button class="btn tip__percentage">5%</button>
+              <button class="btn tip__percentage">10%</button>
+              <button class="btn tip__percentage">15%</button>
+              <button class="btn tip__percentage">25%</button>
+              <button class="btn tip__percentage">50%</button>
+              <!-- <input type="text" class="custom" placeholder="Custom"> -->
+            </div>
+
           </div>
 
           <div class="people">
@@ -48,16 +55,16 @@
         <div class="output">
           <div class="result">
             <div class="tip__amount">
-              <p class="tip__amount">Tip Amount<span class="per__person">/person</span></p>
-              <p class="amount__payable"><span><img src="./images/icon-dollar.svg" alt=""></span>0.00</p>
+              <p class="tip__person">Tip Amount<span class="per__person">/person</span></p>
+              <p class="amount__payable"><span><img src="./images/icon-dollar.svg" alt=""></span>4.27</p>
             </div>
             <div class="total__amount">
-              <p class="total__amount">Total<span class="per__person">/person</span></p>
+              <p class="total__person">Total<span class="per__person">/person</span></p>
               <p class="amount__payable"><span><img src="./images/icon-dollar.svg" alt=""></span>0.00</p>
             </div>
           </div>
 
-          <button class="btn">RESET</button>
+          <button class="btn reset">RESET</button>
 
           </div>
           
