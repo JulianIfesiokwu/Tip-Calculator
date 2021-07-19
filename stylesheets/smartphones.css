@@ -49,18 +49,26 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.bill__input {
+.bill__input, .people__input {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: var(--Light-grayish-cyan-2);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     border-radius: 5px;
     margin-bottom: 1rem;
+    border: 2px solid var(--Light-grayish-cyan-2);
 }
 
-.bill--amount {
+.bill__input span {
+    width: 10%;
+}
+
+.bill--amount, .people__amount {
     font-size: 24px;
     font-weight: 700;
-    width: 90%;
+    width: 80%;
     border: none;
     background-color: transparent;
     outline: none;
@@ -71,7 +79,7 @@ main {
 
 .tip__selectors {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     row-gap: 5%;
     column-gap: 3%;
@@ -97,34 +105,50 @@ main {
     background-color: var(--Very-dark-cyan);
 }
 
+.tip__percentage:hover, .tip__percentage:focus {
+    color: var(--Very-dark-cyan);
+    background-color: var(--Strong-cyan);
+    cursor: pointer;
+}
+
+.custom--tip {
+    width: 100%;
+    border: 2px solid var(--Light-grayish-cyan-2);
+    background-color: var(--Light-grayish-cyan-2);
+    border-radius: 5px;
+}
+
 .custom {
     width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: transparent;
+    text-align: end;
+    font-family: 'Space Mono', monospace;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.people__desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .people__title {
     color: var(--Very-dark-cyan);
     font-weight: 500;
     margin-bottom: 0.5rem;
+    display: inline-block;
 }
 
-.people__input {
-    width: 100%;
-    background-color: var(--Light-grayish-cyan-2);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-.people__amount {
-    font-size: 24px;
-    font-weight: 700;
-    width: 90%;
-    border: none;
-    background-color: transparent;
-    outline: none;
-    text-align: right;
-    font-family: 'Space Mono', monospace;
-    color: var(--Very-dark-cyan);
+.error--message {
+    color: hsl(66, 74%, 62%);
+    visibility: hidden;
 }
 
 .output {
@@ -163,7 +187,13 @@ main {
     color: var(--Very-dark-cyan);
 }
 
+.reset:hover, .reset:focus {
+    background-color: var(--Light-grayish-cyan-1);
+    cursor: pointer;
+}
+
 /* Hide arrow on input fields */
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -175,3 +205,17 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+/* Chnage the color of placeholder text */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--Dark-grayish-cyan);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+  }

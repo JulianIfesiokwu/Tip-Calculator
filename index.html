@@ -23,7 +23,7 @@
             <p class="bill__title">Bill</p>
             <div class="bill__input">
               <span><img src="./images/icon-dollar.svg" alt=""></span>
-              <input type="number" class="bill--amount">
+              <input type="number" class="bill--amount" placeholder="0">
             </div>
 
           </div>
@@ -32,21 +32,29 @@
             <p class="tip__percent__title"> Select Tip %</p>
 
             <div class="tip__selectors">
-              <button class="btn tip__percentage">5%</button>
-              <button class="btn tip__percentage">10%</button>
-              <button class="btn tip__percentage">15%</button>
-              <button class="btn tip__percentage">25%</button>
-              <button class="btn tip__percentage">50%</button>
-              <!-- <input type="text" class="custom" placeholder="Custom"> -->
+              <button class="btn tip__percentage" value="5">5%</button>
+              <button class="btn tip__percentage" value="10">10%</button>
+              <button class="btn tip__percentage" value="15">15%</button>
+              <button class="btn tip__percentage" value="25">25%</button>
+              <button class="btn tip__percentage" value="50">50%</button>
+              <div class="custom--tip">
+                <input type="number" class="custom" placeholder="Custom">
+              </div>
+
             </div>
 
           </div>
 
           <div class="people">
-            <p class="people__title">Number of People</p>
+
+            <div class="people__desc">
+              <p class="people__title">Number of People </p>
+              <span class="error--message">Can't be zero</span>
+            </div>
+            
             <div class="people__input">
               <span><img src="./images/icon-person.svg" alt=""></span>
-              <input type="number" class="people__amount">
+              <input type="number" class="people__amount" placeholder="0">
             </div>
           </div>
 
@@ -56,11 +64,11 @@
           <div class="result">
             <div class="tip__amount">
               <p class="tip__person">Tip Amount<span class="per__person">/person</span></p>
-              <p class="amount__payable"><span><img src="./images/icon-dollar.svg" alt=""></span>4.27</p>
+              <p class="amount__payable"><span><img src="./images/icon-dollar-green.svg" alt=""></span>0.00</p>
             </div>
             <div class="total__amount">
               <p class="total__person">Total<span class="per__person">/person</span></p>
-              <p class="amount__payable"><span><img src="./images/icon-dollar.svg" alt=""></span>0.00</p>
+              <p class="amount__payable"><span><img src="./images/icon-dollar-green.svg" alt=""></span>0.00</p>
             </div>
           </div>
 
@@ -75,7 +83,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Julian Ifesiokwu</a>.
   </div>
 
   <script src="./scripts/main.js"></script>
