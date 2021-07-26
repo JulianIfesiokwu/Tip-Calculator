@@ -103,13 +103,14 @@ main {
 .tip__percentage {
     color: white;
     background-color: var(--Very-dark-cyan);
+    cursor: pointer;
 }
 
-.tip__percentage:hover, .tip__percentage:focus {
+/* .tip__percentage:hover, .tip__percentage:focus {
     color: var(--Very-dark-cyan);
     background-color: var(--Strong-cyan);
     cursor: pointer;
-}
+} */
 
 .custom--tip {
     width: 100%;
@@ -189,6 +190,12 @@ main {
 
 .reset:hover, .reset:focus {
     background-color: var(--Light-grayish-cyan-1);
+    cursor: pointer;
+}
+
+.active {
+    color: var(--Very-dark-cyan);
+    background-color: var(--Strong-cyan);
     cursor: pointer;
 }
 
